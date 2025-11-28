@@ -1,0 +1,3 @@
+Timestamp,VM Name,Action,Old Size,New Size,Status
+2024-10-08 16:39:42,SampleVM-01,Downsize,Standard_DS11_v2,Standard_E2s_v3,Success
+2024-10-08 16:39:42,SampleVM-02,Upsize,Standard_D4s_v3,Standard_B4ms,Success

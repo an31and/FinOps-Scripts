@@ -1,0 +1,4 @@
+Name	SubscriptionId	ResourceGroup	NewSize	OldSize	ResizeDownFrequency	ResizeDownDay	ResizeDownTime	ResizeUpFrequency	ResizeUpDay	ResizeUpTime
+SampleVM-01	11111111-1111-1111-1111-111111111111	ResourceGroup1	Standard_E2s_v3	Standard_DS11_v2	Monthly	3rd Saturday	02:00	Monthly	3rd Sunday	02:00
+SampleVM-02	22222222-2222-2222-2222-222222222222	ResourceGroup2	Standard_B4ms	Standard_D4s_v3	Weekly	Friday	01:00	Weekly	Monday	01:00
+SampleVM-03	33333333-3333-3333-3333-333333333333	ResourceGroup3	Standard_F2s	Standard_D2s_v3	Daily		00:30	Daily		06:00
