@@ -1,0 +1,120 @@
+{
+  "// ===================================": "",
+  "// Azure Tagging Analysis Configuration": "",
+  "// This file contains all available configuration options": "",
+  "// Uncomment parameters by removing '//' to use them": "",
+  "": "",
+  "// === MANDATORY TAGS CONFIGURATION ===": "",
+  "// Define tags that all resources must have": "",
+  "mandatory_tags": [
+    "Environment",
+    "Portfolio",
+    "Application",
+    "BillTo",
+    "DataClassification",
+    "ContactEmail",
+    "BusinessCriticality",
+    "Project"
+  ],
+  "// === TAG VARIATIONS CONFIGURATION ===": "",
+  "// This is the main configuration - defines acceptable variations for each tag": "",
+  "// Compliance Status:": "",
+  "//   - COMPLIANT (Green): Exact match (e.g., 'Environment' = 'Environment')": "",
+  "//   - PARTIAL (Yellow): Variation match (e.g., 'env' or 'Env' matches 'Environment')": "",
+  "//   - NON_COMPLIANT (Red): Tag missing or no match found": "",
+  "tag_variations": {
+    "Environment": {
+      "canonical_name": "Environment",
+      "variations": [
+        "environment",
+        " Environment",
+        "Envrionment",
+        "x_Environment",
+        "csva-environment",
+        "Env",
+        "env",
+        "Environment ",
+        "ENVIRONMENT"
+      ],
+      "fuzzy_threshold": 80,
+      "case_sensitive": false
+    },
+    "Portfolio": {
+      "canonical_name": "Portfolio",
+      "variations": [
+        "portfolio",
+        "PortFolio",
+        "x_Portfolio",
+        "portfolio ",
+        " Portfolio",
+        "Portfolio "
+      ],
+      "fuzzy_threshold": 80,
+      "case_sensitive": false
+    },
+    "Application": {
+      "canonical_name": "Application",
+      "variations": [
+        "application",
+        "App",
+        "AppName",
+        "Application ",
+        "application ",
+        " Application",
+        "x_Application",
+        "ApplicationType",
+        "Application Type"
+      ],
+      "fuzzy_threshold": 80,
+      "case_sensitive": false
+    },
+    "BillTo": {
+      "canonical_name": "BillTo",
+      "variations": [
+        "billTo",
+        "Bill",
+        "Billing",
+        "Bill-To",
+        "bill_to",
+        " BillTo",
+        "BillTo ",
+        "billTo ",
+        "x_BillTo",
+        "billToDetails",
+        "BillToDetails"
+      ],
+      "fuzzy_threshold": 80,
+      "case_sensitive": false
+    }
+  },
+  "// === OUTPUT CONFIGURATION ===": "",
+  "//output_file": "azure-tagging-report.xlsx",
+  "// === SUBSCRIPTION CONFIGURATION ===": "",
+  "//subscription_ids": [
+    "sub-id-1",
+    "sub-id-2"
+  ],
+  "//excluded_subscription_ids": [
+    "sub-id-to-exclude-1",
+    "sub-id-to-exclude-2"
+  ],
+  "// === PERFORMANCE SETTINGS ===": "",
+  "//max_workers": 5,
+  "//timeout": 60,
+  "// === RESOURCE TYPE FILTERING ===": "",
+  "//exclude_resource_types": [
+    "microsoft.insights/components",
+    "microsoft.operationsmanagement/solutions"
+  ],
+  "// === FUZZY MATCHING CONFIGURATION ===": "",
+  "//fuzzy_matching_threshold": 85,
+  "// === AZURE API CONFIGURATION ===": "",
+  "//api_version": "2021-04-01",
+  "// === DASHBOARD OPTIONS ===": "",
+  "//dashboard_options": {
+    "enable_export": true,
+    "max_drill_down_rows": 10000,
+    "chart_animation_duration": 1000,
+    "enable_real_time_search": true
+  }
+}
